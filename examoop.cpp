@@ -18,6 +18,7 @@ int find_t(string t) {
     return sum;
 }
 
+
 int find_te(string t) {
     char l = 't';
     char k = 'e';
@@ -50,10 +51,10 @@ TEST_CASE("Find te", "[tefind]") {
     string b = "ttest";
     string c = "tttt";
     string d = "tetete";
-    REQUIRE(find_t(a) == 1);
-    REQUIRE(find_t(b) == 2);
-    REQUIRE(find_t(c) == 4);
-    REQUIRE(find_t(d) == 0);
+    REQUIRE(find_te(a) == 1);
+    REQUIRE(find_te(b) == 2);
+    REQUIRE(find_te(c) == 4);
+    REQUIRE(find_te(d) == 0);
 }
 
 int main()
