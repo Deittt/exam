@@ -18,7 +18,7 @@ int find_t(string t) {
     return sum;
 }
 
-void find_te(string t) {
+int find_te(string t) {
     char l = 't';
     char k = 'e';
     int sum = 0;
@@ -31,6 +31,7 @@ void find_te(string t) {
 
     }
     cout << sum << endl;
+    return sum;
 }
 
 TEST_CASE("Find t", "[tfind]") {
@@ -44,7 +45,18 @@ TEST_CASE("Find t", "[tfind]") {
     REQUIRE(find_t(d) == 3);
 }
 
-/*int main()
+TEST_CASE("Find te", "[tefind]") {
+    string a = "test";
+    string b = "ttest";
+    string c = "tttt";
+    string d = "tetete";
+    REQUIRE(find_t(a) == 1);
+    REQUIRE(find_t(b) == 2);
+    REQUIRE(find_t(c) == 4);
+    REQUIRE(find_t(d) == 0);
+}
+
+int main()
 {
     string str;
     cin >> str;
@@ -52,4 +64,4 @@ TEST_CASE("Find t", "[tfind]") {
     find_te(str);
    
     return 0;
-}*/
+}
