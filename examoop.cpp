@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void find_t(string t) {
+int find_t(string t) {
     char l = 't';
     int sum = 0;
     for (int i = 0; i < t.size(); i++)
@@ -15,6 +15,7 @@ void find_t(string t) {
 
     }
     cout << sum << endl;
+    return sum;
 }
 
 void find_te(string t) {
