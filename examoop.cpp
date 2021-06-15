@@ -1,5 +1,6 @@
 #include <iostream>
-
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 using namespace std;
 
 
@@ -31,7 +32,18 @@ void find_te(string t) {
     cout << sum << endl;
 }
 
-int main()
+TEST_CASE("Find t", "[tfind]") {
+    string a="test";
+    string b = "ttest";
+    string c = "tttt";
+    string d = "tetete";
+    REQUIRE(find_t(a) == 2);
+    REQUIRE(find_t(b) == 3);  
+    REQUIRE(find_t(c) == 4);
+    REQUIRE(find_t(d) == 3);
+}
+
+/*int main()
 {
     string str;
     cin >> str;
@@ -39,4 +51,4 @@ int main()
     find_te(str);
    
     return 0;
-}
+}*/
